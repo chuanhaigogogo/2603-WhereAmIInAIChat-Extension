@@ -8,50 +8,88 @@
     body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #1f2937; line-height: 1.7; }
     h1 { font-size: 24px; }
     h2 { font-size: 18px; margin-top: 28px; }
+    h3 { font-size: 16px; margin-top: 20px; }
     p, li { font-size: 15px; }
     .date { color: #6b7280; font-size: 14px; }
+    a { color: #2563eb; }
   </style>
 </head>
 <body>
   <h1>MindFlow Privacy Policy</h1>
-  <p class="date">Last updated: 2026-04-06</p>
+  <p class="date">Last updated: April 6, 2026</p>
 
-  <h2>What MindFlow Does</h2>
-  <p>MindFlow is a browser extension that generates mind maps from your AI conversations on supported platforms (ChatGPT, Claude, Gemini). It helps you visualize the structure of what you're learning.</p>
+  <h2>Overview</h2>
+  <p>MindFlow is a Chrome extension that generates mind maps and review notes from AI conversations. We are committed to protecting your privacy.</p>
 
   <h2>Data Collection</h2>
-  <p><strong>We do not collect any data.</strong> MindFlow has no backend server, no analytics, no telemetry. The extension developer never receives any of your data.</p>
+  <p>MindFlow does <strong>NOT</strong> collect, store, or transmit any personal data to external servers. We do not operate any backend server or database.</p>
 
-  <h2>Data Access</h2>
-  <p>MindFlow reads conversation text from AI chat pages you visit (ChatGPT, Claude, Gemini) to extract knowledge points and generate mind maps. This processing happens entirely within your browser.</p>
+  <h2>How Your Data Is Handled</h2>
 
-  <h2>Data Storage</h2>
+  <h3>API Key</h3>
+  <p>Your API key is stored locally in your browser using Chrome's built-in storage API. It is never sent to MindFlow's servers — we don't have any. When you click "Generate," your API key is used to send conversation content directly to your chosen AI provider. MindFlow acts only as a bridge between your browser and your AI provider.</p>
+
+  <h3>Conversation Content</h3>
+  <p>MindFlow reads your AI conversation content only when you explicitly click the "Generate" button. The content is sent directly from your browser to your chosen AI provider for analysis. MindFlow does not store, log, or transmit conversation content to any other destination.</p>
+
+  <h3>Generated Mind Maps and Notes</h3>
+  <p>All generated mind maps and notes exist only in your current browser session. They are never uploaded or shared unless you choose to export them yourself.</p>
+
+  <h2>Permissions Used</h2>
+
+  <h3>Required Permissions</h3>
   <ul>
-    <li><strong>Preferences:</strong> Your settings (extraction mode, API provider) are stored in Chrome's local storage on your device.</li>
-    <li><strong>API Key:</strong> If you choose to use AI-enhanced mode, your API key is stored in Chrome's local storage on your device only. It is never transmitted to anyone except the AI provider you selected (Anthropic or OpenAI) when making extraction requests.</li>
-    <li><strong>Conversation data:</strong> Processed in memory during your session. Not persisted after you close the tab.</li>
+    <li><strong>storage</strong> — Saves your API key and preferences locally in your browser. No data leaves your device.</li>
+    <li><strong>activeTab</strong> — Accesses the currently active tab to read AI conversation content when you click the MindFlow icon.</li>
   </ul>
-  <p>All stored data is removed when you uninstall the extension.</p>
 
-  <h2>Third-Party Services (Optional)</h2>
-  <p>If you enable AI-enhanced mode and provide your own API key, MindFlow sends Q&amp;A pairs from your conversation to the AI provider you select:</p>
+  <h3>Optional Host Permissions</h3>
+  <p>These are only requested when you enable AI-enhanced mode and choose a provider:</p>
   <ul>
-    <li><strong>Anthropic API</strong> (<a href="https://www.anthropic.com/privacy">privacy policy</a>)</li>
-    <li><strong>OpenAI API</strong> (<a href="https://openai.com/privacy">privacy policy</a>)</li>
+    <li><strong>api.anthropic.com</strong> — Connects to the Anthropic Claude API for AI-powered mind map generation.</li>
+    <li><strong>api.openai.com</strong> — Connects to the OpenAI API for AI-powered mind map generation.</li>
+    <li><strong>api.deepseek.com</strong> — Connects to the DeepSeek API for AI-powered mind map generation.</li>
+    <li><strong>ark.cn-beijing.volces.com</strong> — Connects to the Volcengine (Doubao) API for AI-powered mind map generation.</li>
+    <li><strong>generativelanguage.googleapis.com</strong> — Connects to the Google Gemini API for AI-powered mind map generation.</li>
   </ul>
-  <p>This is entirely opt-in. In free mode, no data leaves your browser.</p>
 
-  <h2>Permissions</h2>
+  <h3>Content Script Sites</h3>
+  <p>MindFlow runs a content script on the following AI chat sites to read conversation content and display the sidebar:</p>
   <ul>
-    <li><strong>storage:</strong> Save your preferences locally</li>
-    <li><strong>activeTab:</strong> Toggle the sidebar on the current tab</li>
-    <li><strong>API host permissions (optional):</strong> Only requested when you enable AI-enhanced mode. Allows the extension to call the AI provider's API.</li>
+    <li>ChatGPT (chatgpt.com, chat.openai.com)</li>
+    <li>Claude (claude.ai)</li>
+    <li>DeepSeek (chat.deepseek.com)</li>
+    <li>Gemini (gemini.google.com)</li>
+    <li>Grok (grok.com)</li>
+    <li>Doubao (doubao.com)</li>
+    <li>Perplexity (perplexity.ai)</li>
   </ul>
+  <p>The content script only reads the conversation text displayed on the page. It does not access cookies, passwords, form data, or any other information on these sites.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>When you use the "Generate" feature, MindFlow sends conversation content to the AI provider you have configured. This communication goes directly from your browser to the provider's servers. MindFlow does not relay, intercept, or store this data. Your use of these third-party services is governed by the respective provider's own privacy policy and terms of service.</p>
+
+  <h2>Data Sharing</h2>
+  <p>We do not sell, trade, or share any user data with third parties.</p>
 
   <h2>Data Deletion</h2>
-  <p>To delete all MindFlow data: uninstall the extension, or go to Chrome Settings &gt; Extensions &gt; MindFlow &gt; Remove. All local data is immediately deleted.</p>
+  <p>You can delete all locally stored data at any time by:</p>
+  <ul>
+    <li>Clearing the extension's storage in Chrome settings (chrome://extensions → MindFlow → Details → Clear data), or</li>
+    <li>Uninstalling the MindFlow extension</li>
+  </ul>
+
+  <h2>Children's Privacy</h2>
+  <p>MindFlow does not knowingly collect any data from children under 13.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this privacy policy from time to time. Any changes will be reflected by the "Last updated" date at the top of this page.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy? Open an issue on the <a href="https://github.com/chuanhaigogogo/2603-WhereAmIInAIChat-Extension">MindFlow GitHub repository</a>.</p>
+  <p>If you have questions about this privacy policy, please contact us at:</p>
+  <ul>
+    <li>Email: <a href="mailto:chuanhaigogogo@gmail.com">chuanhaigogogo@gmail.com</a></li>
+    <li>GitHub: <a href="https://github.com/chuanhaigogogo/2603-WhereAmIInAIChat-Extension">https://github.com/chuanhaigogogo/2603-WhereAmIInAIChat-Extension</a></li>
+  </ul>
 </body>
 </html>
