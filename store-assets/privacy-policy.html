@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindFlow Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #1f2937; line-height: 1.7; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; margin-top: 28px; }
+    p, li { font-size: 15px; }
+    .date { color: #6b7280; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>MindFlow Privacy Policy</h1>
+  <p class="date">Last updated: 2026-04-06</p>
+
+  <h2>What MindFlow Does</h2>
+  <p>MindFlow is a browser extension that generates mind maps from your AI conversations on supported platforms (ChatGPT, Claude, Gemini). It helps you visualize the structure of what you're learning.</p>
+
+  <h2>Data Collection</h2>
+  <p><strong>We do not collect any data.</strong> MindFlow has no backend server, no analytics, no telemetry. The extension developer never receives any of your data.</p>
+
+  <h2>Data Access</h2>
+  <p>MindFlow reads conversation text from AI chat pages you visit (ChatGPT, Claude, Gemini) to extract knowledge points and generate mind maps. This processing happens entirely within your browser.</p>
+
+  <h2>Data Storage</h2>
+  <ul>
+    <li><strong>Preferences:</strong> Your settings (extraction mode, API provider) are stored in Chrome's local storage on your device.</li>
+    <li><strong>API Key:</strong> If you choose to use AI-enhanced mode, your API key is stored in Chrome's local storage on your device only. It is never transmitted to anyone except the AI provider you selected (Anthropic or OpenAI) when making extraction requests.</li>
+    <li><strong>Conversation data:</strong> Processed in memory during your session. Not persisted after you close the tab.</li>
+  </ul>
+  <p>All stored data is removed when you uninstall the extension.</p>
+
+  <h2>Third-Party Services (Optional)</h2>
+  <p>If you enable AI-enhanced mode and provide your own API key, MindFlow sends Q&amp;A pairs from your conversation to the AI provider you select:</p>
+  <ul>
+    <li><strong>Anthropic API</strong> (<a href="https://www.anthropic.com/privacy">privacy policy</a>)</li>
+    <li><strong>OpenAI API</strong> (<a href="https://openai.com/privacy">privacy policy</a>)</li>
+  </ul>
+  <p>This is entirely opt-in. In free mode, no data leaves your browser.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>storage:</strong> Save your preferences locally</li>
+    <li><strong>activeTab:</strong> Toggle the sidebar on the current tab</li>
+    <li><strong>API host permissions (optional):</strong> Only requested when you enable AI-enhanced mode. Allows the extension to call the AI provider's API.</li>
+  </ul>
+
+  <h2>Data Deletion</h2>
+  <p>To delete all MindFlow data: uninstall the extension, or go to Chrome Settings &gt; Extensions &gt; MindFlow &gt; Remove. All local data is immediately deleted.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Open an issue on the <a href="https://github.com/chuanhaigogogo/2603-WhereAmIInAIChat-Extension">MindFlow GitHub repository</a>.</p>
+</body>
+</html>
