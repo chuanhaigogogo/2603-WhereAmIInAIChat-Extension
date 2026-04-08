@@ -56,7 +56,7 @@ export default defineConfig({
     name: 'MindFlow: Where Am I in AI Chat',
     description: 'Real-time mind maps from AI conversations. Free rule-based mode or AI-enhanced mode with your own API key.',
     version: '1.0.0',
-    homepage_url: 'https://github.com/chuanhaigogogo/2603-WhereAmIInAIChat-Extension',
+    homepage_url: 'https://chuanhaigogogo.github.io/2603-WhereAmIInAIChat-Extension/privacy-policy',
     icons: {
       '16': 'icon-16.png',
       '48': 'icon-48.png',
