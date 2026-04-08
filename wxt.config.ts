@@ -54,7 +54,7 @@ export default defineConfig({
   }),
   manifest: {
     name: 'MindFlow: Where Am I in AI Chat',
-    description: 'Real-time mind maps from AI conversations. Free rule-based mode or AI-enhanced mode with your own API key.',
+    description: 'Lost track of what you were learning? MindFlow maps your AI conversations so you always know where you are.',
     version: '1.0.0',
     homepage_url: 'https://chuanhaigogogo.github.io/2603-WhereAmIInAIChat-Extension/privacy-policy',
     icons: {
